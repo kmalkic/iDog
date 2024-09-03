@@ -8,12 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		0A2D749C2C87496500E81312 /* iDogApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A2D749B2C87496500E81312 /* iDogApp.swift */; };
-		0A2D749E2C87496500E81312 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A2D749D2C87496500E81312 /* ContentView.swift */; };
 		0A2D74A02C87496700E81312 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0A2D749F2C87496700E81312 /* Assets.xcassets */; };
 		0A2D74A32C87496700E81312 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0A2D74A22C87496700E81312 /* Preview Assets.xcassets */; };
 		0A2D74AD2C87496700E81312 /* iDogTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A2D74AC2C87496700E81312 /* iDogTests.swift */; };
 		0A2D74B72C87496700E81312 /* iDogUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A2D74B62C87496700E81312 /* iDogUITests.swift */; };
 		0A2D74B92C87496700E81312 /* iDogUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A2D74B82C87496700E81312 /* iDogUITestsLaunchTests.swift */; };
+		0A2D74CE2C874D2E00E81312 /* CoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A2D74CD2C874D2E00E81312 /* CoordinatorProtocol.swift */; };
+		0A2D74D02C874D6900E81312 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A2D74CF2C874D6900E81312 /* AppCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +37,6 @@
 /* Begin PBXFileReference section */
 		0A2D74982C87496500E81312 /* iDog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iDog.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A2D749B2C87496500E81312 /* iDogApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iDogApp.swift; sourceTree = "<group>"; };
-		0A2D749D2C87496500E81312 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		0A2D749F2C87496700E81312 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0A2D74A22C87496700E81312 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		0A2D74A82C87496700E81312 /* iDogTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iDogTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -44,6 +44,8 @@
 		0A2D74B22C87496700E81312 /* iDogUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iDogUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A2D74B62C87496700E81312 /* iDogUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iDogUITests.swift; sourceTree = "<group>"; };
 		0A2D74B82C87496700E81312 /* iDogUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iDogUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		0A2D74CD2C874D2E00E81312 /* CoordinatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorProtocol.swift; sourceTree = "<group>"; };
+		0A2D74CF2C874D6900E81312 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,10 +97,12 @@
 			isa = PBXGroup;
 			children = (
 				0A2D74C52C8749A100E81312 /* App */,
-				0A2D749B2C87496500E81312 /* iDogApp.swift */,
-				0A2D749D2C87496500E81312 /* ContentView.swift */,
-				0A2D749F2C87496700E81312 /* Assets.xcassets */,
+				0A2D74CA2C874B9A00E81312 /* Coordinators */,
+				0A2D74C62C874B5700E81312 /* Data */,
 				0A2D74A12C87496700E81312 /* Preview Content */,
+				0A2D74CC2C874CC900E81312 /* Ressources */,
+				0A2D74C92C874B9300E81312 /* Services */,
+				0A2D74CB2C874CA000E81312 /* Views */,
 			);
 			path = iDog;
 			sourceTree = "<group>";
@@ -131,8 +135,63 @@
 		0A2D74C52C8749A100E81312 /* App */ = {
 			isa = PBXGroup;
 			children = (
+				0A2D749B2C87496500E81312 /* iDogApp.swift */,
 			);
 			path = App;
+			sourceTree = "<group>";
+		};
+		0A2D74C62C874B5700E81312 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				0A2D74C82C874B7400E81312 /* ViewModels */,
+				0A2D74C72C874B5F00E81312 /* DomainModels */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		0A2D74C72C874B5F00E81312 /* DomainModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DomainModels;
+			sourceTree = "<group>";
+		};
+		0A2D74C82C874B7400E81312 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		0A2D74C92C874B9300E81312 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		0A2D74CA2C874B9A00E81312 /* Coordinators */ = {
+			isa = PBXGroup;
+			children = (
+				0A2D74CD2C874D2E00E81312 /* CoordinatorProtocol.swift */,
+				0A2D74CF2C874D6900E81312 /* AppCoordinator.swift */,
+			);
+			path = Coordinators;
+			sourceTree = "<group>";
+		};
+		0A2D74CB2C874CA000E81312 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		0A2D74CC2C874CC900E81312 /* Ressources */ = {
+			isa = PBXGroup;
+			children = (
+				0A2D749F2C87496700E81312 /* Assets.xcassets */,
+			);
+			path = Ressources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -265,8 +324,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0A2D749E2C87496500E81312 /* ContentView.swift in Sources */,
+				0A2D74D02C874D6900E81312 /* AppCoordinator.swift in Sources */,
 				0A2D749C2C87496500E81312 /* iDogApp.swift in Sources */,
+				0A2D74CE2C874D2E00E81312 /* CoordinatorProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
