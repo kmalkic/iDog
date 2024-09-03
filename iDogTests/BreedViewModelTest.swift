@@ -1,14 +1,13 @@
 //
-//  iDogTests.swift
+//  BreedViewModelTest.swift
 //  iDogTests
 //
 //  Created by Kevin Malkic on 03/09/2024.
 //
 
 import XCTest
-@testable import iDog
 
-final class iDogTests: XCTestCase {
+final class BreedViewModelTest: XCTestCase {
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.

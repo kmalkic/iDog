@@ -7,14 +7,36 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0A2D749C2C87496500E81312 /* iDogApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A2D749B2C87496500E81312 /* iDogApp.swift */; };
+		0A2D749C2C87496500E81312 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A2D749B2C87496500E81312 /* AppDelegate.swift */; };
 		0A2D74A02C87496700E81312 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0A2D749F2C87496700E81312 /* Assets.xcassets */; };
 		0A2D74A32C87496700E81312 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0A2D74A22C87496700E81312 /* Preview Assets.xcassets */; };
-		0A2D74AD2C87496700E81312 /* iDogTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A2D74AC2C87496700E81312 /* iDogTests.swift */; };
-		0A2D74B72C87496700E81312 /* iDogUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A2D74B62C87496700E81312 /* iDogUITests.swift */; };
-		0A2D74B92C87496700E81312 /* iDogUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A2D74B82C87496700E81312 /* iDogUITestsLaunchTests.swift */; };
+		0A2D74AD2C87496700E81312 /* BreedListProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A2D74AC2C87496700E81312 /* BreedListProviderTests.swift */; };
 		0A2D74CE2C874D2E00E81312 /* CoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A2D74CD2C874D2E00E81312 /* CoordinatorProtocol.swift */; };
 		0A2D74D02C874D6900E81312 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A2D74CF2C874D6900E81312 /* AppCoordinator.swift */; };
+		0A2D74D22C874FD500E81312 /* BreedListProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A2D74D12C874FD500E81312 /* BreedListProvider.swift */; };
+		0A2D74D42C87503C00E81312 /* BreedListProvidable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A2D74D32C87503C00E81312 /* BreedListProvidable.swift */; };
+		0A2D74D62C87507900E81312 /* Breed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A2D74D52C87507900E81312 /* Breed.swift */; };
+		0A2D74D82C8764DA00E81312 /* BreedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A2D74D72C8764DA00E81312 /* BreedViewModel.swift */; };
+		0A2D74DA2C8780A500E81312 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A2D74D92C8780A500E81312 /* HTTPMethod.swift */; };
+		0A2D74DC2C8780C000E81312 /* APIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A2D74DB2C8780C000E81312 /* APIRequest.swift */; };
+		0A2D74DE2C8780F000E81312 /* ProviderConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A2D74DD2C8780F000E81312 /* ProviderConfiguration.swift */; };
+		0A2D74E02C87810900E81312 /* BreedProviderConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A2D74DF2C87810900E81312 /* BreedProviderConfiguration.swift */; };
+		0A2D74E32C87815200E81312 /* BreedListRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A2D74E22C87815200E81312 /* BreedListRequest.swift */; };
+		0A2D74E62C87855D00E81312 /* BreedListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A2D74E52C87855D00E81312 /* BreedListView.swift */; };
+		0A2D74E82C878FB900E81312 /* BreedListCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A2D74E72C878FB900E81312 /* BreedListCoordinator.swift */; };
+		0A2D74EB2C87905D00E81312 /* BreedListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A2D74EA2C87905D00E81312 /* BreedListPresenter.swift */; };
+		0A2D74ED2C87906E00E81312 /* BreedListFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A2D74EC2C87906E00E81312 /* BreedListFactory.swift */; };
+		0A2D74EF2C87909400E81312 /* BreedListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A2D74EE2C87909400E81312 /* BreedListViewModel.swift */; };
+		0A2D74F12C87951700E81312 /* Shared.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A2D74F02C87951700E81312 /* Shared.swift */; };
+		0A2D74F32C879C2B00E81312 /* BreedResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A2D74F22C879C2B00E81312 /* BreedResponse.swift */; };
+		0A2D74F62C879D0300E81312 /* BreedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A2D74F52C879D0200E81312 /* BreedCell.swift */; };
+		0A2D74F92C87AA4900E81312 /* AsyncImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A2D74F82C87AA4900E81312 /* AsyncImageView.swift */; };
+		0A2D75012C87BE8B00E81312 /* breeds_bad_url.json in Resources */ = {isa = PBXBuildFile; fileRef = 0A2D74FD2C87B7FD00E81312 /* breeds_bad_url.json */; };
+		0A2D75022C87BE8B00E81312 /* breeds.json in Resources */ = {isa = PBXBuildFile; fileRef = 0A2D74FA2C87B10600E81312 /* breeds.json */; };
+		0A2D75042C87C0A200E81312 /* breeds_corrupted.json in Resources */ = {isa = PBXBuildFile; fileRef = 0A2D75032C87C0A200E81312 /* breeds_corrupted.json */; };
+		0A2D75062C87C0F800E81312 /* BreedListRequestMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A2D75052C87C0F800E81312 /* BreedListRequestMock.swift */; };
+		0A2D75082C87C18200E81312 /* BreedViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A2D75072C87C18200E81312 /* BreedViewModelTest.swift */; };
+		0A2D750C2C87C64300E81312 /* breeds_error.json in Resources */ = {isa = PBXBuildFile; fileRef = 0A2D750B2C87C64300E81312 /* breeds_error.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -25,27 +47,42 @@
 			remoteGlobalIDString = 0A2D74972C87496500E81312;
 			remoteInfo = iDog;
 		};
-		0A2D74B32C87496700E81312 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 0A2D74902C87496500E81312 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 0A2D74972C87496500E81312;
-			remoteInfo = iDog;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		0A2D74982C87496500E81312 /* iDog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iDog.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		0A2D749B2C87496500E81312 /* iDogApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iDogApp.swift; sourceTree = "<group>"; };
+		0A2D749B2C87496500E81312 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0A2D749F2C87496700E81312 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0A2D74A22C87496700E81312 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		0A2D74A82C87496700E81312 /* iDogTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iDogTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		0A2D74AC2C87496700E81312 /* iDogTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iDogTests.swift; sourceTree = "<group>"; };
-		0A2D74B22C87496700E81312 /* iDogUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iDogUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		0A2D74B62C87496700E81312 /* iDogUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iDogUITests.swift; sourceTree = "<group>"; };
-		0A2D74B82C87496700E81312 /* iDogUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iDogUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		0A2D74AC2C87496700E81312 /* BreedListProviderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedListProviderTests.swift; sourceTree = "<group>"; };
 		0A2D74CD2C874D2E00E81312 /* CoordinatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorProtocol.swift; sourceTree = "<group>"; };
 		0A2D74CF2C874D6900E81312 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		0A2D74D12C874FD500E81312 /* BreedListProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedListProvider.swift; sourceTree = "<group>"; };
+		0A2D74D32C87503C00E81312 /* BreedListProvidable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedListProvidable.swift; sourceTree = "<group>"; };
+		0A2D74D52C87507900E81312 /* Breed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Breed.swift; sourceTree = "<group>"; };
+		0A2D74D72C8764DA00E81312 /* BreedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedViewModel.swift; sourceTree = "<group>"; };
+		0A2D74D92C8780A500E81312 /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
+		0A2D74DB2C8780C000E81312 /* APIRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequest.swift; sourceTree = "<group>"; };
+		0A2D74DD2C8780F000E81312 /* ProviderConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProviderConfiguration.swift; sourceTree = "<group>"; };
+		0A2D74DF2C87810900E81312 /* BreedProviderConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedProviderConfiguration.swift; sourceTree = "<group>"; };
+		0A2D74E22C87815200E81312 /* BreedListRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedListRequest.swift; sourceTree = "<group>"; };
+		0A2D74E52C87855D00E81312 /* BreedListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedListView.swift; sourceTree = "<group>"; };
+		0A2D74E72C878FB900E81312 /* BreedListCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedListCoordinator.swift; sourceTree = "<group>"; };
+		0A2D74EA2C87905D00E81312 /* BreedListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedListPresenter.swift; sourceTree = "<group>"; };
+		0A2D74EC2C87906E00E81312 /* BreedListFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedListFactory.swift; sourceTree = "<group>"; };
+		0A2D74EE2C87909400E81312 /* BreedListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedListViewModel.swift; sourceTree = "<group>"; };
+		0A2D74F02C87951700E81312 /* Shared.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shared.swift; sourceTree = "<group>"; };
+		0A2D74F22C879C2B00E81312 /* BreedResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedResponse.swift; sourceTree = "<group>"; };
+		0A2D74F52C879D0200E81312 /* BreedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedCell.swift; sourceTree = "<group>"; };
+		0A2D74F82C87AA4900E81312 /* AsyncImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncImageView.swift; sourceTree = "<group>"; };
+		0A2D74FA2C87B10600E81312 /* breeds.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = breeds.json; sourceTree = "<group>"; };
+		0A2D74FD2C87B7FD00E81312 /* breeds_bad_url.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = breeds_bad_url.json; sourceTree = "<group>"; };
+		0A2D74FF2C87B9F900E81312 /* iDog.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = iDog.xctestplan; sourceTree = "<group>"; };
+		0A2D75032C87C0A200E81312 /* breeds_corrupted.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = breeds_corrupted.json; sourceTree = "<group>"; };
+		0A2D75052C87C0F800E81312 /* BreedListRequestMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedListRequestMock.swift; sourceTree = "<group>"; };
+		0A2D75072C87C18200E81312 /* BreedViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedViewModelTest.swift; sourceTree = "<group>"; };
+		0A2D750B2C87C64300E81312 /* breeds_error.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = breeds_error.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,22 +100,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		0A2D74AF2C87496700E81312 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		0A2D748F2C87496500E81312 = {
 			isa = PBXGroup;
 			children = (
+				0A2D74FF2C87B9F900E81312 /* iDog.xctestplan */,
 				0A2D749A2C87496500E81312 /* iDog */,
 				0A2D74AB2C87496700E81312 /* iDogTests */,
-				0A2D74B52C87496700E81312 /* iDogUITests */,
 				0A2D74992C87496500E81312 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -88,7 +118,6 @@
 			children = (
 				0A2D74982C87496500E81312 /* iDog.app */,
 				0A2D74A82C87496700E81312 /* iDogTests.xctest */,
-				0A2D74B22C87496700E81312 /* iDogUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -96,6 +125,7 @@
 		0A2D749A2C87496500E81312 /* iDog */ = {
 			isa = PBXGroup;
 			children = (
+				0A2D74F42C879CEF00E81312 /* Components */,
 				0A2D74C52C8749A100E81312 /* App */,
 				0A2D74CA2C874B9A00E81312 /* Coordinators */,
 				0A2D74C62C874B5700E81312 /* Data */,
@@ -118,24 +148,18 @@
 		0A2D74AB2C87496700E81312 /* iDogTests */ = {
 			isa = PBXGroup;
 			children = (
-				0A2D74AC2C87496700E81312 /* iDogTests.swift */,
+				0A2D750A2C87C42200E81312 /* Mock */,
+				0A2D75092C87C40900E81312 /* Ressources */,
+				0A2D74AC2C87496700E81312 /* BreedListProviderTests.swift */,
+				0A2D75072C87C18200E81312 /* BreedViewModelTest.swift */,
 			);
 			path = iDogTests;
-			sourceTree = "<group>";
-		};
-		0A2D74B52C87496700E81312 /* iDogUITests */ = {
-			isa = PBXGroup;
-			children = (
-				0A2D74B62C87496700E81312 /* iDogUITests.swift */,
-				0A2D74B82C87496700E81312 /* iDogUITestsLaunchTests.swift */,
-			);
-			path = iDogUITests;
 			sourceTree = "<group>";
 		};
 		0A2D74C52C8749A100E81312 /* App */ = {
 			isa = PBXGroup;
 			children = (
-				0A2D749B2C87496500E81312 /* iDogApp.swift */,
+				0A2D749B2C87496500E81312 /* AppDelegate.swift */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -143,8 +167,10 @@
 		0A2D74C62C874B5700E81312 /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				0A2D74C82C874B7400E81312 /* ViewModels */,
+				0A2D74D92C8780A500E81312 /* HTTPMethod.swift */,
+				0A2D74F02C87951700E81312 /* Shared.swift */,
 				0A2D74C72C874B5F00E81312 /* DomainModels */,
+				0A2D74C82C874B7400E81312 /* ViewModels */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -152,6 +178,8 @@
 		0A2D74C72C874B5F00E81312 /* DomainModels */ = {
 			isa = PBXGroup;
 			children = (
+				0A2D74D52C87507900E81312 /* Breed.swift */,
+				0A2D74F22C879C2B00E81312 /* BreedResponse.swift */,
 			);
 			path = DomainModels;
 			sourceTree = "<group>";
@@ -159,6 +187,7 @@
 		0A2D74C82C874B7400E81312 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				0A2D74D72C8764DA00E81312 /* BreedViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -166,6 +195,10 @@
 		0A2D74C92C874B9300E81312 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				0A2D74DF2C87810900E81312 /* BreedProviderConfiguration.swift */,
+				0A2D74DD2C8780F000E81312 /* ProviderConfiguration.swift */,
+				0A2D74E42C8781D600E81312 /* Providers */,
+				0A2D74E12C87814200E81312 /* Requests */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -173,8 +206,9 @@
 		0A2D74CA2C874B9A00E81312 /* Coordinators */ = {
 			isa = PBXGroup;
 			children = (
-				0A2D74CD2C874D2E00E81312 /* CoordinatorProtocol.swift */,
 				0A2D74CF2C874D6900E81312 /* AppCoordinator.swift */,
+				0A2D74E72C878FB900E81312 /* BreedListCoordinator.swift */,
+				0A2D74CD2C874D2E00E81312 /* CoordinatorProtocol.swift */,
 			);
 			path = Coordinators;
 			sourceTree = "<group>";
@@ -182,6 +216,7 @@
 		0A2D74CB2C874CA000E81312 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				0A2D74E92C87904800E81312 /* BreedList */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -192,6 +227,71 @@
 				0A2D749F2C87496700E81312 /* Assets.xcassets */,
 			);
 			path = Ressources;
+			sourceTree = "<group>";
+		};
+		0A2D74E12C87814200E81312 /* Requests */ = {
+			isa = PBXGroup;
+			children = (
+				0A2D74DB2C8780C000E81312 /* APIRequest.swift */,
+				0A2D74E22C87815200E81312 /* BreedListRequest.swift */,
+			);
+			path = Requests;
+			sourceTree = "<group>";
+		};
+		0A2D74E42C8781D600E81312 /* Providers */ = {
+			isa = PBXGroup;
+			children = (
+				0A2D74D32C87503C00E81312 /* BreedListProvidable.swift */,
+				0A2D74D12C874FD500E81312 /* BreedListProvider.swift */,
+			);
+			path = Providers;
+			sourceTree = "<group>";
+		};
+		0A2D74E92C87904800E81312 /* BreedList */ = {
+			isa = PBXGroup;
+			children = (
+				0A2D74F72C879D1A00E81312 /* Cells */,
+				0A2D74EC2C87906E00E81312 /* BreedListFactory.swift */,
+				0A2D74EA2C87905D00E81312 /* BreedListPresenter.swift */,
+				0A2D74E52C87855D00E81312 /* BreedListView.swift */,
+				0A2D74EE2C87909400E81312 /* BreedListViewModel.swift */,
+			);
+			path = BreedList;
+			sourceTree = "<group>";
+		};
+		0A2D74F42C879CEF00E81312 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				0A2D74F82C87AA4900E81312 /* AsyncImageView.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		0A2D74F72C879D1A00E81312 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				0A2D74F52C879D0200E81312 /* BreedCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		0A2D75092C87C40900E81312 /* Ressources */ = {
+			isa = PBXGroup;
+			children = (
+				0A2D74FD2C87B7FD00E81312 /* breeds_bad_url.json */,
+				0A2D75032C87C0A200E81312 /* breeds_corrupted.json */,
+				0A2D750B2C87C64300E81312 /* breeds_error.json */,
+				0A2D74FA2C87B10600E81312 /* breeds.json */,
+			);
+			path = Ressources;
+			sourceTree = "<group>";
+		};
+		0A2D750A2C87C42200E81312 /* Mock */ = {
+			isa = PBXGroup;
+			children = (
+				0A2D75052C87C0F800E81312 /* BreedListRequestMock.swift */,
+			);
+			path = Mock;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -232,24 +332,6 @@
 			productReference = 0A2D74A82C87496700E81312 /* iDogTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		0A2D74B12C87496700E81312 /* iDogUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 0A2D74C22C87496700E81312 /* Build configuration list for PBXNativeTarget "iDogUITests" */;
-			buildPhases = (
-				0A2D74AE2C87496700E81312 /* Sources */,
-				0A2D74AF2C87496700E81312 /* Frameworks */,
-				0A2D74B02C87496700E81312 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				0A2D74B42C87496700E81312 /* PBXTargetDependency */,
-			);
-			name = iDogUITests;
-			productName = iDogUITests;
-			productReference = 0A2D74B22C87496700E81312 /* iDogUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -264,10 +346,6 @@
 						CreatedOnToolsVersion = 15.4;
 					};
 					0A2D74A72C87496700E81312 = {
-						CreatedOnToolsVersion = 15.4;
-						TestTargetID = 0A2D74972C87496500E81312;
-					};
-					0A2D74B12C87496700E81312 = {
 						CreatedOnToolsVersion = 15.4;
 						TestTargetID = 0A2D74972C87496500E81312;
 					};
@@ -288,7 +366,6 @@
 			targets = (
 				0A2D74972C87496500E81312 /* iDog */,
 				0A2D74A72C87496700E81312 /* iDogTests */,
-				0A2D74B12C87496700E81312 /* iDogUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -307,13 +384,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		0A2D74B02C87496700E81312 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+				0A2D75012C87BE8B00E81312 /* breeds_bad_url.json in Resources */,
+				0A2D75042C87C0A200E81312 /* breeds_corrupted.json in Resources */,
+				0A2D75022C87BE8B00E81312 /* breeds.json in Resources */,
+				0A2D750C2C87C64300E81312 /* breeds_error.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -324,9 +398,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0A2D74E32C87815200E81312 /* BreedListRequest.swift in Sources */,
+				0A2D74D62C87507900E81312 /* Breed.swift in Sources */,
+				0A2D74D42C87503C00E81312 /* BreedListProvidable.swift in Sources */,
+				0A2D74D82C8764DA00E81312 /* BreedViewModel.swift in Sources */,
+				0A2D74E02C87810900E81312 /* BreedProviderConfiguration.swift in Sources */,
+				0A2D74D22C874FD500E81312 /* BreedListProvider.swift in Sources */,
+				0A2D74F12C87951700E81312 /* Shared.swift in Sources */,
+				0A2D74DE2C8780F000E81312 /* ProviderConfiguration.swift in Sources */,
+				0A2D74F62C879D0300E81312 /* BreedCell.swift in Sources */,
+				0A2D74EF2C87909400E81312 /* BreedListViewModel.swift in Sources */,
+				0A2D74ED2C87906E00E81312 /* BreedListFactory.swift in Sources */,
+				0A2D74E62C87855D00E81312 /* BreedListView.swift in Sources */,
+				0A2D74DA2C8780A500E81312 /* HTTPMethod.swift in Sources */,
+				0A2D74F32C879C2B00E81312 /* BreedResponse.swift in Sources */,
+				0A2D74E82C878FB900E81312 /* BreedListCoordinator.swift in Sources */,
 				0A2D74D02C874D6900E81312 /* AppCoordinator.swift in Sources */,
-				0A2D749C2C87496500E81312 /* iDogApp.swift in Sources */,
+				0A2D749C2C87496500E81312 /* AppDelegate.swift in Sources */,
+				0A2D74DC2C8780C000E81312 /* APIRequest.swift in Sources */,
 				0A2D74CE2C874D2E00E81312 /* CoordinatorProtocol.swift in Sources */,
+				0A2D74EB2C87905D00E81312 /* BreedListPresenter.swift in Sources */,
+				0A2D74F92C87AA4900E81312 /* AsyncImageView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -334,16 +426,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0A2D74AD2C87496700E81312 /* iDogTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		0A2D74AE2C87496700E81312 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				0A2D74B72C87496700E81312 /* iDogUITests.swift in Sources */,
-				0A2D74B92C87496700E81312 /* iDogUITestsLaunchTests.swift in Sources */,
+				0A2D74AD2C87496700E81312 /* BreedListProviderTests.swift in Sources */,
+				0A2D75062C87C0F800E81312 /* BreedListRequestMock.swift in Sources */,
+				0A2D75082C87C18200E81312 /* BreedViewModelTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -354,11 +439,6 @@
 			isa = PBXTargetDependency;
 			target = 0A2D74972C87496500E81312 /* iDog */;
 			targetProxy = 0A2D74A92C87496700E81312 /* PBXContainerItemProxy */;
-		};
-		0A2D74B42C87496700E81312 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 0A2D74972C87496500E81312 /* iDog */;
-			targetProxy = 0A2D74B32C87496700E81312 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -493,7 +573,7 @@
 				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = NO;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
@@ -523,7 +603,7 @@
 				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = NO;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
@@ -580,40 +660,6 @@
 			};
 			name = Release;
 		};
-		0A2D74C32C87496700E81312 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = kevinmalkic.iDogUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = iDog;
-			};
-			name = Debug;
-		};
-		0A2D74C42C87496700E81312 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = kevinmalkic.iDogUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = iDog;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -640,15 +686,6 @@
 			buildConfigurations = (
 				0A2D74C02C87496700E81312 /* Debug */,
 				0A2D74C12C87496700E81312 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		0A2D74C22C87496700E81312 /* Build configuration list for PBXNativeTarget "iDogUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				0A2D74C32C87496700E81312 /* Debug */,
-				0A2D74C42C87496700E81312 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

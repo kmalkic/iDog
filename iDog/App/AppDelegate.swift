@@ -1,11 +1,12 @@
 //
-//  iDogApp.swift
+//  AppDelegate.swift
 //  iDog
 //
 //  Created by Kevin Malkic on 03/09/2024.
 //
 
 import UIKit
+import SwiftUI
 
 @UIApplicationMain
 

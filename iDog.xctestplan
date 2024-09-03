@@ -1,0 +1,29 @@
+{
+  "configurations" : [
+    {
+      "id" : "F2DFD6A2-53CB-4E78-A272-6F7EF24B8FFA",
+      "name" : "Test Scheme Action",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "targetForVariableExpansion" : {
+      "containerPath" : "container:iDog.xcodeproj",
+      "identifier" : "0A2D74972C87496500E81312",
+      "name" : "iDog"
+    }
+  },
+  "testTargets" : [
+    {
+      "parallelizable" : true,
+      "target" : {
+        "containerPath" : "container:iDog.xcodeproj",
+        "identifier" : "0A2D74A72C87496700E81312",
+        "name" : "iDogTests"
+      }
+    }
+  ],
+  "version" : 1
+}

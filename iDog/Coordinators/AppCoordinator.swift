@@ -7,6 +7,7 @@
 
 import Foundation
 import UIKit
+import SwiftUI
 
 class AppCoordinator: CoordinatorProtocol {
     
@@ -24,6 +25,14 @@ class AppCoordinator: CoordinatorProtocol {
     }
 
     func start() {
-
+        displayBreeds()
+    }
+    
+    private func displayBreeds() {
+        let breedListCoordinator = BreedListCoordinator(
+            navigationController: navigationController
+        )
+        childCoordinators.append(breedListCoordinator)
+        breedListCoordinator.start()
     }
 }

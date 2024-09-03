@@ -1,0 +1,10 @@
+Pods/
+!Pods/Manifest.lock
+build/
+.DS_Store
+
+UserInterfaceState.xcuserstate
+*/xcuserdata/*
+
+#Breakpoints
+*.xcbkptlist
