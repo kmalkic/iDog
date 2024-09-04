@@ -1,0 +1,5 @@
+{ 
+    "status": "error",
+    "message": "No route found for \"GET http:\/\/dog.ceo\/api\/breeds\/image\/randomm\" with code: 0",
+    "code": 404
+}

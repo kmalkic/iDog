@@ -1,13 +1,13 @@
 //
-//  BreedListProvider.swift
+//  BreedGalleryProvider.swift
 //  iDog
 //
-//  Created by Kevin Malkic on 03/09/2024.
+//  Created by Kevin Malkic on 04/09/2024.
 //
 
 import Foundation
 
-struct BreedListProvider: BreedListProvidable {
+struct BreedGalleryProvider: BreedGalleryProvidable {
     
     let request: APIRequest
     
@@ -15,8 +15,8 @@ struct BreedListProvider: BreedListProvidable {
         self.request = request
     }
     
-    // Async function to fetch breeds
-    func fetch() async throws -> [Breed] {
+    // Async function to fetch dogs photos
+    func fetch() async throws -> [Dog] {
         
         guard let urlRequest = request.urlRequest
         else {
@@ -27,8 +27,8 @@ struct BreedListProvider: BreedListProvidable {
         
         let decoder = JSONDecoder()
         do {
-            let breedResponse = try decoder.decode(BreedResponse.self, from: data)
-            return breedResponse.breeds
+            let breedResponse = try decoder.decode(DogResponse.self, from: data)
+            return breedResponse.dogs
         }
         catch {
             throw error

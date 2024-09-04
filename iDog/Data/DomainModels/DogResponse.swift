@@ -1,15 +1,15 @@
 //
-//  BreedResponse.swift
+//  DogResponse.swift
 //  iDog
 //
-//  Created by Kevin Malkic on 03/09/2024.
+//  Created by Kevin Malkic on 04/09/2024.
 //
 
 import Foundation
 
-struct BreedResponse: Decodable {
+struct DogResponse: Decodable {
     
-    let breeds: [Breed]
+    let dogs: [Dog]
     let status: Status
     
     init(from decoder: Decoder) throws {
@@ -21,8 +21,8 @@ struct BreedResponse: Decodable {
             throw URLError(.badServerResponse)
         }
         self.status = status
-        let message = try container.decode([String: [String]].self, forKey: .message)
-        self.breeds = message.keys.map { .init(id: $0) }
+        let message = try container.decode([String].self, forKey: .message)
+        self.dogs = message.map { .init(url: $0) }
     }
 
     enum CodingKeys: String, CodingKey {
