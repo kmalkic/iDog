@@ -14,10 +14,10 @@ struct BreedListView: View {
     
     var body: some View {
         content
+            .navigationTitle("iDog")
             .task {
                 await presenter.fetch()
             }
-            .navigationTitle("iDog")
     }
     
     @ViewBuilder

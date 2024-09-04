@@ -18,6 +18,7 @@ class BreedListCoordinator: CoordinatorProtocol {
     }
 
     func start() {
+        
         let viewController = UIHostingController(rootView: BreedListFactory.makeView(routingDelegate: self))
         navigationController?.viewControllers = [viewController]
     }
@@ -25,7 +26,13 @@ class BreedListCoordinator: CoordinatorProtocol {
 
 extension BreedListCoordinator: BreedListRoutingDelegate {
     
-    func routeToBreedPhotos() {
+    func routeToBreedPhotos(for breedId: String) {
         
+        let purchaseCoorindator = BreedGalleryCoordinator(
+            navigationController: navigationController
+        )
+        self.childCoordinators.append(purchaseCoorindator)
+        purchaseCoorindator.start()
+        purchaseCoorindator.loadGallery(for: breedId)
     }
 }

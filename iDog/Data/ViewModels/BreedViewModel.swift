@@ -16,6 +16,7 @@ struct BreedViewModel: Identifiable {
 extension BreedViewModel {
     
     init(_ breed: Breed) {
+        
         self.id = breed.id
         self.displayName = id
             .components(separatedBy: "-")

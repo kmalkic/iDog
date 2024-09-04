@@ -30,7 +30,7 @@
 		0A2D74F12C87951700E81312 /* Shared.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A2D74F02C87951700E81312 /* Shared.swift */; };
 		0A2D74F32C879C2B00E81312 /* BreedResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A2D74F22C879C2B00E81312 /* BreedResponse.swift */; };
 		0A2D74F62C879D0300E81312 /* BreedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A2D74F52C879D0200E81312 /* BreedCell.swift */; };
-		0A2D74F92C87AA4900E81312 /* AsyncImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A2D74F82C87AA4900E81312 /* AsyncImageView.swift */; };
+		0A2D74F92C87AA4900E81312 /* AsyncDogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A2D74F82C87AA4900E81312 /* AsyncDogView.swift */; };
 		0A2D75012C87BE8B00E81312 /* breeds_bad_url.json in Resources */ = {isa = PBXBuildFile; fileRef = 0A2D74FD2C87B7FD00E81312 /* breeds_bad_url.json */; };
 		0A2D75022C87BE8B00E81312 /* breeds.json in Resources */ = {isa = PBXBuildFile; fileRef = 0A2D74FA2C87B10600E81312 /* breeds.json */; };
 		0A2D75042C87C0A200E81312 /* breeds_corrupted.json in Resources */ = {isa = PBXBuildFile; fileRef = 0A2D75032C87C0A200E81312 /* breeds_corrupted.json */; };
@@ -50,6 +50,13 @@
 		0A2D75242C886A9000E81312 /* breeds_gallery.json in Resources */ = {isa = PBXBuildFile; fileRef = 0A2D75202C886A9000E81312 /* breeds_gallery.json */; };
 		0A2D75252C886A9000E81312 /* breeds_gallery_error.json in Resources */ = {isa = PBXBuildFile; fileRef = 0A2D75212C886A9000E81312 /* breeds_gallery_error.json */; };
 		0A2D75262C886A9000E81312 /* breeds_gallery_bad_url.json in Resources */ = {isa = PBXBuildFile; fileRef = 0A2D75222C886A9000E81312 /* breeds_gallery_bad_url.json */; };
+		0A2D75292C886B9800E81312 /* BreedGalleryPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A2D75282C886B9800E81312 /* BreedGalleryPresenter.swift */; };
+		0A2D752B2C886BA500E81312 /* BreedGalleryFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A2D752A2C886BA500E81312 /* BreedGalleryFactory.swift */; };
+		0A2D752D2C886BAF00E81312 /* BreedGalleryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A2D752C2C886BAF00E81312 /* BreedGalleryView.swift */; };
+		0A2D752F2C886BBB00E81312 /* BreedGalleryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A2D752E2C886BBB00E81312 /* BreedGalleryViewModel.swift */; };
+		0A2D75312C886BE300E81312 /* DogViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A2D75302C886BE300E81312 /* DogViewModel.swift */; };
+		0A2D75362C88781F00E81312 /* Array + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A2D75352C88781F00E81312 /* Array + Extensions.swift */; };
+		0A2D75382C88811500E81312 /* UINavigationController + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A2D75372C88811500E81312 /* UINavigationController + Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -88,7 +95,7 @@
 		0A2D74F02C87951700E81312 /* Shared.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shared.swift; sourceTree = "<group>"; };
 		0A2D74F22C879C2B00E81312 /* BreedResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedResponse.swift; sourceTree = "<group>"; };
 		0A2D74F52C879D0200E81312 /* BreedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedCell.swift; sourceTree = "<group>"; };
-		0A2D74F82C87AA4900E81312 /* AsyncImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncImageView.swift; sourceTree = "<group>"; };
+		0A2D74F82C87AA4900E81312 /* AsyncDogView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncDogView.swift; sourceTree = "<group>"; };
 		0A2D74FA2C87B10600E81312 /* breeds.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = breeds.json; sourceTree = "<group>"; };
 		0A2D74FD2C87B7FD00E81312 /* breeds_bad_url.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = breeds_bad_url.json; sourceTree = "<group>"; };
 		0A2D74FF2C87B9F900E81312 /* iDog.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = iDog.xctestplan; sourceTree = "<group>"; };
@@ -109,6 +116,13 @@
 		0A2D75202C886A9000E81312 /* breeds_gallery.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = breeds_gallery.json; sourceTree = "<group>"; };
 		0A2D75212C886A9000E81312 /* breeds_gallery_error.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = breeds_gallery_error.json; sourceTree = "<group>"; };
 		0A2D75222C886A9000E81312 /* breeds_gallery_bad_url.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = breeds_gallery_bad_url.json; sourceTree = "<group>"; };
+		0A2D75282C886B9800E81312 /* BreedGalleryPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedGalleryPresenter.swift; sourceTree = "<group>"; };
+		0A2D752A2C886BA500E81312 /* BreedGalleryFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedGalleryFactory.swift; sourceTree = "<group>"; };
+		0A2D752C2C886BAF00E81312 /* BreedGalleryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedGalleryView.swift; sourceTree = "<group>"; };
+		0A2D752E2C886BBB00E81312 /* BreedGalleryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedGalleryViewModel.swift; sourceTree = "<group>"; };
+		0A2D75302C886BE300E81312 /* DogViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogViewModel.swift; sourceTree = "<group>"; };
+		0A2D75352C88781F00E81312 /* Array + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array + Extensions.swift"; sourceTree = "<group>"; };
+		0A2D75372C88811500E81312 /* UINavigationController + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationController + Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,13 +165,14 @@
 		0A2D749A2C87496500E81312 /* iDog */ = {
 			isa = PBXGroup;
 			children = (
-				0A2D74F42C879CEF00E81312 /* Components */,
 				0A2D74C52C8749A100E81312 /* App */,
+				0A2D74F42C879CEF00E81312 /* Components */,
 				0A2D74CA2C874B9A00E81312 /* Coordinators */,
 				0A2D74C62C874B5700E81312 /* Data */,
 				0A2D74A12C87496700E81312 /* Preview Content */,
 				0A2D74CC2C874CC900E81312 /* Ressources */,
 				0A2D74C92C874B9300E81312 /* Services */,
+				0A2D75342C88781400E81312 /* Utilities */,
 				0A2D74CB2C874CA000E81312 /* Views */,
 			);
 			path = iDog;
@@ -218,6 +233,7 @@
 			isa = PBXGroup;
 			children = (
 				0A2D74D72C8764DA00E81312 /* BreedViewModel.swift */,
+				0A2D75302C886BE300E81312 /* DogViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -247,6 +263,7 @@
 		0A2D74CB2C874CA000E81312 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				0A2D75272C886B7400E81312 /* BreedGallery */,
 				0A2D74E92C87904800E81312 /* BreedList */,
 			);
 			path = Views;
@@ -296,7 +313,7 @@
 		0A2D74F42C879CEF00E81312 /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				0A2D74F82C87AA4900E81312 /* AsyncImageView.swift */,
+				0A2D74F82C87AA4900E81312 /* AsyncDogView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -331,6 +348,26 @@
 				0A2D75052C87C0F800E81312 /* BreedListRequestMock.swift */,
 			);
 			path = Mock;
+			sourceTree = "<group>";
+		};
+		0A2D75272C886B7400E81312 /* BreedGallery */ = {
+			isa = PBXGroup;
+			children = (
+				0A2D752A2C886BA500E81312 /* BreedGalleryFactory.swift */,
+				0A2D75282C886B9800E81312 /* BreedGalleryPresenter.swift */,
+				0A2D752C2C886BAF00E81312 /* BreedGalleryView.swift */,
+				0A2D752E2C886BBB00E81312 /* BreedGalleryViewModel.swift */,
+			);
+			path = BreedGallery;
+			sourceTree = "<group>";
+		};
+		0A2D75342C88781400E81312 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				0A2D75352C88781F00E81312 /* Array + Extensions.swift */,
+				0A2D75372C88811500E81312 /* UINavigationController + Extensions.swift */,
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -443,6 +480,7 @@
 			files = (
 				0A2D750E2C88666700E81312 /* BreedGalleryCoordinator.swift in Sources */,
 				0A2D74E32C87815200E81312 /* BreedListRequest.swift in Sources */,
+				0A2D75292C886B9800E81312 /* BreedGalleryPresenter.swift in Sources */,
 				0A2D74D62C87507900E81312 /* Breed.swift in Sources */,
 				0A2D74D42C87503C00E81312 /* BreedListProvidable.swift in Sources */,
 				0A2D74D82C8764DA00E81312 /* BreedViewModel.swift in Sources */,
@@ -452,23 +490,29 @@
 				0A2D74F12C87951700E81312 /* Shared.swift in Sources */,
 				0A2D75102C88679900E81312 /* BreedGalleryProvidable.swift in Sources */,
 				0A2D74DE2C8780F000E81312 /* ProviderConfiguration.swift in Sources */,
+				0A2D75312C886BE300E81312 /* DogViewModel.swift in Sources */,
 				0A2D751A2C88691100E81312 /* BreedGalleryRequest.swift in Sources */,
 				0A2D74F62C879D0300E81312 /* BreedCell.swift in Sources */,
 				0A2D74EF2C87909400E81312 /* BreedListViewModel.swift in Sources */,
 				0A2D74ED2C87906E00E81312 /* BreedListFactory.swift in Sources */,
 				0A2D75182C88684000E81312 /* Status.swift in Sources */,
+				0A2D752D2C886BAF00E81312 /* BreedGalleryView.swift in Sources */,
 				0A2D74E62C87855D00E81312 /* BreedListView.swift in Sources */,
 				0A2D74DA2C8780A500E81312 /* HTTPMethod.swift in Sources */,
+				0A2D752F2C886BBB00E81312 /* BreedGalleryViewModel.swift in Sources */,
 				0A2D74F32C879C2B00E81312 /* BreedResponse.swift in Sources */,
+				0A2D752B2C886BA500E81312 /* BreedGalleryFactory.swift in Sources */,
 				0A2D74E82C878FB900E81312 /* BreedListCoordinator.swift in Sources */,
 				0A2D74D02C874D6900E81312 /* AppCoordinator.swift in Sources */,
 				0A2D75122C8867AC00E81312 /* BreedGalleryProvider.swift in Sources */,
+				0A2D75382C88811500E81312 /* UINavigationController + Extensions.swift in Sources */,
 				0A2D749C2C87496500E81312 /* AppDelegate.swift in Sources */,
 				0A2D74DC2C8780C000E81312 /* APIRequest.swift in Sources */,
+				0A2D75362C88781F00E81312 /* Array + Extensions.swift in Sources */,
 				0A2D74CE2C874D2E00E81312 /* CoordinatorProtocol.swift in Sources */,
 				0A2D74EB2C87905D00E81312 /* BreedListPresenter.swift in Sources */,
 				0A2D75162C88680A00E81312 /* Dog.swift in Sources */,
-				0A2D74F92C87AA4900E81312 /* AsyncImageView.swift in Sources */,
+				0A2D74F92C87AA4900E81312 /* AsyncDogView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -629,7 +673,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -659,7 +703,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

@@ -10,12 +10,12 @@ import SwiftUI
 protocol BreedListPresentable {
     
     func fetch() async
-    func breedSelected(_ id: String)
+    func breedSelected(for id: String)
 }
 
 protocol BreedListRoutingDelegate: AnyObject {
     
-    func routeToBreedPhotos() -> Void
+    func routeToBreedPhotos(for breedId: String) -> Void
 }
 
 class BreedListPresenter {
@@ -36,6 +36,7 @@ class BreedListPresenter {
     
     @MainActor
     private func updateData(_ breeds: [BreedViewModel]) async {
+        
         var viewModel = sharedViewModel.value
         viewModel.breeds = breeds.sorted(by: { a, b in a.displayName < b.displayName } )
         sharedViewModel.value = viewModel
@@ -43,6 +44,7 @@ class BreedListPresenter {
     
     @MainActor
     private func updateError(_ error: Error) async {
+        
         var viewModel = sharedViewModel.value
         viewModel.error = error
         sharedViewModel.value = viewModel
@@ -52,6 +54,7 @@ class BreedListPresenter {
 extension BreedListPresenter: BreedListPresentable {
     
     func fetch() async {
+        
         do {
             let breeds = try await breedListProvider.fetch()
             await updateData(breeds.map(BreedViewModel.init))
@@ -61,8 +64,8 @@ extension BreedListPresenter: BreedListPresentable {
         }
     }
     
-    func breedSelected(_ id: String) {
+    func breedSelected(for id: String) {
         
-        print(id)
+        routingDelegate?.routeToBreedPhotos(for: id)
     }
 }

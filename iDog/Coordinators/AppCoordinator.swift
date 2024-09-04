@@ -31,10 +31,20 @@ class AppCoordinator: CoordinatorProtocol {
     
     private func setupStyles() {
         let attributes: [NSAttributedString.Key: Any] = [
-            .font: UIFont(name: "Bodoni 72", size: 32)!,
+            .font: UIFont(name: "Bodoni 72", size: 30)!,
             .foregroundColor: UIColor.black
         ]
-        UINavigationBar.appearance().titleTextAttributes = attributes
+        
+        UINavigationBar.appearance().tintColor = .black
+        
+        let appearance = UINavigationBarAppearance()
+        appearance.titleTextAttributes = attributes
+        // Configure the background to be translucent
+        appearance.configureWithDefaultBackground()
+        
+        // Apply the appearance to all states of the navigation bar
+        UINavigationBar.appearance().standardAppearance = appearance
+        UINavigationBar.appearance().scrollEdgeAppearance = appearance
     }
     
     private func displayBreeds() {

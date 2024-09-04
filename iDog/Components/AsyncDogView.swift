@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct AsyncImageView: View {
+struct AsyncDogView: View {
     
     struct Style {
         let width: CGFloat
@@ -15,25 +15,22 @@ struct AsyncImageView: View {
         let cornerRadius: CGFloat
     }
     
-    let imageURL: URL
+    let imageURL: URL?
     var style: Style = .init(width: 50, height: 50, cornerRadius: 10)
     
     var body: some View {
         AsyncImage(url: imageURL) { phase in
             if let image = phase.image {
-                image // Displays the loaded image
+                image
                     .resizable()
-                    .scaledToFill()
-                    .frame(width: style.width, height: style.height)
-                    .cornerRadius(style.cornerRadius)
+                    .aspectRatio(contentMode: .fit)
             } else if phase.error != nil {
                 Color.red // Indicates an error with a red color
                     .frame(width: style.width, height: style.height)
                     .cornerRadius(style.cornerRadius)
             } else {
-                Color.gray // Placeholder while loading
+                ProgressView()
                     .frame(width: style.width, height: style.height)
-                    .cornerRadius(style.cornerRadius)
             }
         }
     }
