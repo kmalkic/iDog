@@ -25,7 +25,16 @@ class AppCoordinator: CoordinatorProtocol {
     }
 
     func start() {
+        setupStyles()
         displayBreeds()
+    }
+    
+    private func setupStyles() {
+        let attributes: [NSAttributedString.Key: Any] = [
+            .font: UIFont(name: "Bodoni 72", size: 32)!,
+            .foregroundColor: UIColor.black
+        ]
+        UINavigationBar.appearance().titleTextAttributes = attributes
     }
     
     private func displayBreeds() {
