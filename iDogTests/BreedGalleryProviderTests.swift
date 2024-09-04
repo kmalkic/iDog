@@ -31,11 +31,14 @@ final class BreedGalleryProviderTests: XCTestCase {
             let breeds = try await provider.fetch()
             XCTAssertNotEqual(breeds.count, 0)
         } catch {
-            if let error = error as? URLError {
-                XCTAssertEqual(error.errorCode, URLError(.badServerResponse).errorCode)
+            if let error = error as? BreedAPIError {
+                switch error {
+                case .badResponse:
+                    XCTAssertTrue(true)
+                }
             }
             else {
-                XCTFail()
+                XCTFail(error.localizedDescription)
             }
         }
     }
@@ -48,11 +51,14 @@ final class BreedGalleryProviderTests: XCTestCase {
             let breeds = try await provider.fetch()
             XCTAssertNotEqual(breeds.count, 0)
         } catch {
-            if let error = error as? URLError {
-                XCTAssertEqual(error.errorCode, URLError(.badServerResponse).errorCode)
+            if let error = error as? BreedAPIError {
+                switch error {
+                case .badResponse:
+                    XCTAssertTrue(true)
+                }
             }
             else {
-                XCTFail()
+                XCTFail(error.localizedDescription)
             }
         }
     }

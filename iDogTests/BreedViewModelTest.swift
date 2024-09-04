@@ -1,5 +1,5 @@
 //
-//  BreedViewModelTest.swift
+//  BreedPresentationModelTest.swift
 //  iDogTests
 //
 //  Created by Kevin Malkic on 03/09/2024.
@@ -8,7 +8,7 @@
 import XCTest
 @testable import iDog
 
-final class BreedViewModelTest: XCTestCase {
+final class BreedPresentationModelTest: XCTestCase {
 
     func testDisplayNameFormatting() throws {
 
@@ -17,10 +17,10 @@ final class BreedViewModelTest: XCTestCase {
             .init(id: "bakharwal"),
             .init(id: "australian-shepherd")
         ]
-        let viewModels = breeds.map(BreedViewModel.init)
+        let presentationModels = breeds.map(BreedPresentationModel.init)
         
-        XCTAssertEqual(viewModels[0].displayName, "Affenpinscher")
-        XCTAssertEqual(viewModels[1].displayName, "Bakharwal")
-        XCTAssertEqual(viewModels[2].displayName, "Australian Shepherd")
+        XCTAssertEqual(presentationModels[0].displayName, "Affenpinscher")
+        XCTAssertEqual(presentationModels[1].displayName, "Bakharwal")
+        XCTAssertEqual(presentationModels[2].displayName, "Australian Shepherd")
     }
 }

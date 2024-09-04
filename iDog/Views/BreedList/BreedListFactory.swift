@@ -14,14 +14,14 @@ enum BreedListFactory {
     ) -> some View {
 
         let request = BreedListRequest()
-        let sharedViewModel = Shared(value: BreedListViewModel.new)
+        let sharedPresentationModel = Shared(value: BreedListPresentationModel.new)
         let presenter = BreedListPresenter(
-            sharedViewModel: sharedViewModel,
+            sharedPresentationModel: sharedPresentationModel,
             breedListProvider: BreedListProvider(request: request),
             routingDelegate: routingDelegate
         )
         return BreedListView(
-            viewModel: sharedViewModel,
+            presentationModel: sharedPresentationModel,
             presenter: presenter
         )
     }

@@ -15,39 +15,39 @@ protocol BreedListPresentable {
 
 protocol BreedListRoutingDelegate: AnyObject {
     
-    func routeToBreedPhotos(for breedId: String) -> Void
+    func routeToBreedPhotos(for breed: BreedPresentationModel) -> Void
 }
 
 class BreedListPresenter {
     
-    private let sharedViewModel: Shared<BreedListViewModel>
+    private let sharedPresentationModel: Shared<BreedListPresentationModel>
     private let breedListProvider: BreedListProvidable
     private weak var routingDelegate: BreedListRoutingDelegate?
     
     init(
-        sharedViewModel: Shared<BreedListViewModel>,
+        sharedPresentationModel: Shared<BreedListPresentationModel>,
         breedListProvider: BreedListProvidable,
         routingDelegate: BreedListRoutingDelegate?
     ) {
-        self.sharedViewModel = sharedViewModel
+        self.sharedPresentationModel = sharedPresentationModel
         self.breedListProvider = breedListProvider
         self.routingDelegate = routingDelegate
     }
     
     @MainActor
-    private func updateData(_ breeds: [BreedViewModel]) async {
+    private func updateData(_ breeds: [BreedPresentationModel]) async {
         
-        var viewModel = sharedViewModel.value
-        viewModel.breeds = breeds.sorted(by: { a, b in a.displayName < b.displayName } )
-        sharedViewModel.value = viewModel
+        var presentationModel = sharedPresentationModel.value
+        presentationModel.breeds = breeds.sorted(by: { a, b in a.displayName < b.displayName } )
+        sharedPresentationModel.value = presentationModel
     }
     
     @MainActor
     private func updateError(_ error: Error) async {
         
-        var viewModel = sharedViewModel.value
-        viewModel.error = error
-        sharedViewModel.value = viewModel
+        var presentationModel = sharedPresentationModel.value
+        presentationModel.error = error
+        sharedPresentationModel.value = presentationModel
     }
 }
 
@@ -55,9 +55,12 @@ extension BreedListPresenter: BreedListPresentable {
     
     func fetch() async {
         
+        guard sharedPresentationModel.value.breeds.isEmpty 
+        else { return }
+        
         do {
             let breeds = try await breedListProvider.fetch()
-            await updateData(breeds.map(BreedViewModel.init))
+            await updateData(breeds.map(BreedPresentationModel.init))
         }
         catch {
             await updateError(error)
@@ -66,6 +69,10 @@ extension BreedListPresenter: BreedListPresentable {
     
     func breedSelected(for id: String) {
         
-        routingDelegate?.routeToBreedPhotos(for: id)
+        let breeds = sharedPresentationModel.value.breeds
+        guard let breed = breeds.first(where: { $0.id == id })
+        else { return }
+        
+        routingDelegate?.routeToBreedPhotos(for: breed)
     }
 }

@@ -44,7 +44,6 @@ class AppCoordinator: CoordinatorProtocol {
         
         // Apply the appearance to all states of the navigation bar
         UINavigationBar.appearance().standardAppearance = appearance
-        UINavigationBar.appearance().scrollEdgeAppearance = appearance
     }
     
     private func displayBreeds() {

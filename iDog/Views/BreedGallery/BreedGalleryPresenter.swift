@@ -14,33 +14,33 @@ protocol BreedGalleryPresentable {
 
 class BreedGalleryPresenter {
     
-    private let sharedViewModel: Shared<BreedGalleryViewModel>
+    private let sharedPresentationModel: Shared<BreedGalleryPresentationModel>
     private let breedGalleryProvider: BreedGalleryProvidable
     
     init(
-        sharedViewModel: Shared<BreedGalleryViewModel>,
+        sharedPresentationModel: Shared<BreedGalleryPresentationModel>,
         breedGalleryProvider: BreedGalleryProvidable
     ) {
-        self.sharedViewModel = sharedViewModel
+        self.sharedPresentationModel = sharedPresentationModel
         self.breedGalleryProvider = breedGalleryProvider
     }
     
     @MainActor
-    private func updateData(_ dogs: [DogViewModel]) async {
+    private func updateData(_ dogs: [DogPresentationModel]) async {
         
-        var viewModel = sharedViewModel.value
+        var presentationModel = sharedPresentationModel.value
         let split = dogs.splitByEvenOddIndices()
-        viewModel.leftColumn = split.0
-        viewModel.rightColumn = split.1
-        sharedViewModel.value = viewModel
+        presentationModel.leftColumn = split.0
+        presentationModel.rightColumn = split.1
+        sharedPresentationModel.value = presentationModel
     }
     
     @MainActor
     private func updateError(_ error: Error) async {
         
-        var viewModel = sharedViewModel.value
-        viewModel.error = error
-        sharedViewModel.value = viewModel
+        var presentationModel = sharedPresentationModel.value
+        presentationModel.error = error
+        sharedPresentationModel.value = presentationModel
     }
 }
 
@@ -48,9 +48,12 @@ extension BreedGalleryPresenter: BreedGalleryPresentable {
     
     func fetch() async {
         
+        guard sharedPresentationModel.value.leftColumn.isEmpty
+        else { return }
+        
         do {
             let dogs = try await breedGalleryProvider.fetch()
-            await updateData(dogs.map(DogViewModel.init))
+            await updateData(dogs.compactMap(DogPresentationModel.init))
         }
         catch {
             await updateError(error)

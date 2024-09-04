@@ -17,4 +17,11 @@ extension Breed {
     var path: String {
         id
     }
+    
+    var displayName: String {
+        id.components(separatedBy: "-")
+            .map { $0.capitalized }
+            .joined(separator: " ")
+    }
 }
+

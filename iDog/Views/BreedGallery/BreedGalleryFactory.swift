@@ -9,16 +9,16 @@ import SwiftUI
 
 enum BreedGalleryFactory {
     
-    static func makeView(for breedId: String) -> some View {
+    static func makeView(for breed: BreedPresentationModel) -> some View {
 
-        let request = BreedGalleryRequest(breedId: breedId)
-        let sharedViewModel = Shared(value: BreedGalleryViewModel.new(with: breedId.capitalized))
+        let request = BreedGalleryRequest(breedId: breed.id)
+        let sharedPresentationModel = Shared(value: BreedGalleryPresentationModel.new(title: breed.displayName))
         let presenter = BreedGalleryPresenter(
-            sharedViewModel: sharedViewModel,
+            sharedPresentationModel: sharedPresentationModel,
             breedGalleryProvider: BreedGalleryProvider(request: request)
         )
         return BreedGalleryView(
-            viewModel: sharedViewModel,
+            presentationModel: sharedPresentationModel,
             presenter: presenter
         )
     }

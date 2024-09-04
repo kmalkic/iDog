@@ -26,13 +26,13 @@ class BreedListCoordinator: CoordinatorProtocol {
 
 extension BreedListCoordinator: BreedListRoutingDelegate {
     
-    func routeToBreedPhotos(for breedId: String) {
+    func routeToBreedPhotos(for breed: BreedPresentationModel) {
         
         let purchaseCoorindator = BreedGalleryCoordinator(
             navigationController: navigationController
         )
-        self.childCoordinators.append(purchaseCoorindator)
+        self.childCoordinators = [purchaseCoorindator]
         purchaseCoorindator.start()
-        purchaseCoorindator.loadGallery(for: breedId)
+        purchaseCoorindator.loadGallery(for: breed)
     }
 }

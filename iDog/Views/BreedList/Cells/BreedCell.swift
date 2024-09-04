@@ -17,16 +17,16 @@ struct BreedCell: View {
         var color: Color = .red
     }
     
-    let viewModel: BreedViewModel
+    let presentationModel: BreedPresentationModel
     let action: (String) -> Void
     var style: Style = .init()
     
     var body: some View {
         Button(action: {
-            action(viewModel.id)
+            action(presentationModel.id)
         }, label: {
             HStack {
-                Text(verbatim: viewModel.displayName)
+                Text(verbatim: presentationModel.displayName)
                     .font(.custom("Bodoni 72", size: 28))
                     .foregroundColor(style.color)
                     .padding(.leading, style.padding)

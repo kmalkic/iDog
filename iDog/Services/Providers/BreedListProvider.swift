@@ -23,7 +23,17 @@ struct BreedListProvider: BreedListProvidable {
             throw URLError(.badURL)
         }
 
+        // Check for cancellation before starting the request
+        if Task.isCancelled {
+            throw CancellationError()
+        }
+        
         let (data, _) = try await URLSession.shared.data(for: urlRequest)
+        
+        // Check again for cancellation after network call
+        if Task.isCancelled {
+            throw CancellationError()
+        }
         
         let decoder = JSONDecoder()
         do {

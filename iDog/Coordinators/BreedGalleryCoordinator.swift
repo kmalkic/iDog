@@ -17,13 +17,11 @@ class BreedGalleryCoordinator: CoordinatorProtocol {
         self.navigationController = navigationController
     }
 
-    func start() {
-        
-    }
+    func start() {}
     
-    func loadGallery(for breedId: String) {
+    func loadGallery(for breed: BreedPresentationModel) {
         
-        let viewController = UIHostingController(rootView: BreedGalleryFactory.makeView(for: breedId))
+        let viewController = UIHostingController(rootView: BreedGalleryFactory.makeView(for: breed))
         navigationController?.pushViewController(viewController, animated: true)
     }
 }

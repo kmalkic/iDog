@@ -18,7 +18,7 @@ struct BreedResponse: Decodable {
 
         let status = try container.decode(Status.self, forKey: .status)
         if status == .error {
-            throw URLError(.badServerResponse)
+            throw BreedAPIError.badResponse(.error)
         }
         self.status = status
         let message = try container.decode([String: [String]].self, forKey: .message)
